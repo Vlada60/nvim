@@ -185,6 +185,12 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
+--Move with <C-hjkl> in insert mode
+vim.keymap.set('i', '<C-h>', '<left>')
+vim.keymap.set('i', '<C-j>', '<down>')
+vim.keymap.set('i', '<C-k>', '<up>')
+vim.keymap.set('i', '<C-l>', '<right>')
+
 -- C-s to save in any mode
 vim.keymap.set({ 'n', 'v', 'i' }, '<C-s>', '<cmd>w<CR>')
 
@@ -864,9 +870,9 @@ require('lazy').setup({
         ['<C-k>'] = { 'select_prev', 'fallback_to_mappings' },
         ['<C-j>'] = { 'select_next', 'fallback_to_mappings' },
 
-        ['<C-l>'] = { 'show_signature', 'hide_signature', 'fallback' },
+        ['<C-q>'] = { 'show_signature', 'hide_signature', 'fallback' },
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
-        --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
+        --    https://github.com/L7MON4D3/LuaSnip?tab=readme-ov-file#keymaps
       },
 
       appearance = {
