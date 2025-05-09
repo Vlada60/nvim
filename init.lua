@@ -169,7 +169,7 @@ vim.opt.confirm = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { desc = 'Open [D]iagnostic Quickfix list' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -179,13 +179,15 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+vim.keymap.set('n', '<leader>q', '<cmd>bd<CR>', { desc = '[Q]uit current buffer' })
+
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
---Move with <C-hjkl> in insert mode
+-- Move with <C-hjkl> in insert mode
 vim.keymap.set('i', '<C-h>', '<left>')
 vim.keymap.set('i', '<C-j>', '<down>')
 vim.keymap.set('i', '<C-k>', '<up>')
@@ -196,8 +198,8 @@ vim.keymap.set({ 'n', 'v', 'i' }, '<C-s>', '<cmd>w<CR>')
 
 -- Move lines up or down
 -- Normal Mode Mappings
-vim.keymap.set('n', 'J', ':m .+1<CR>==', { noremap = true, silent = true, desc = 'Move line down' })
-vim.keymap.set('n', 'K', ':m .-2<CR>==', { noremap = true, silent = true, desc = 'Move line up' })
+vim.keymap.set('n', 'J', '<cmd>m .+1<CR>==', { noremap = true, silent = true, desc = 'Move line down' })
+vim.keymap.set('n', 'K', '<cmd>m .-2<CR>==', { noremap = true, silent = true, desc = 'Move line up' })
 
 -- Visual Mode Mappings
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = 'Move lines down' })
