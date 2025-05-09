@@ -24,4 +24,7 @@ return {
       vim.cmd.colorscheme 'tokyonight-night'
     end,
   },
+  {
+    'gamunu/vscode.nvim',
+  },
 }
