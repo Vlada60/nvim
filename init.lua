@@ -214,6 +214,11 @@ vim.keymap.set('n', '<A-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<A-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<A-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Keybinds to split and close easier
+vim.keymap.set('n', '<leader>ws', '<C-w>v', { desc = 'Split Window Vertically' })
+vim.keymap.set('n', '<leader>wh', '<C-w>s', { desc = 'Split Window Horizontally' })
+vim.keymap.set('n', '<leader>wq', '<cmd>q<CR>', { desc = 'Close current window' })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
