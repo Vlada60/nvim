@@ -1,0 +1,7 @@
+zašto se definiše DbContext u repository ako je to samo context koji se ubaci kao parametar
+
+zašto cancellation token nije ubačen u repository
+
+Database function must not be called in non-database contex warning in BaseRepository
+
+withthen in repository
