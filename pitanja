@@ -1,3 +1,0 @@
-Unable to create a 'DbContext' of type 'TravelOrdersDbContext'. The exception 'No suitable constructor was found for entity type 'City'. The following constructors had parameters that could not be bound to properties of the entity type: 
-    Cannot bind 'country' in 'City(Guid id, string name, Country country)'
-Note that only mapped properties can be bound to constructor parameters. Navigations to related entities, including references to owned types, cannot be bound.' was thrown while attempting to create an instance. For the different patterns supported at design time, see https://go.microsoft.com/fwlink/?linkid=851728

@@ -27,4 +27,16 @@ return {
   {
     'gamunu/vscode.nvim',
   },
+  {
+    'EdenEast/nightfox.nvim',
+  },
+  {
+    'nyoom-engineering/oxocarbon.nvim',
+  },
+  {
+    'joshdick/onedark.vim',
+  },
+  {
+    'nordtheme/vim',
+  },
 }
