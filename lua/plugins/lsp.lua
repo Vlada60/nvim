@@ -222,6 +222,8 @@ return {
         -- ts_ls = {},
         --
 
+        prettier = {},
+        prettierd = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -278,6 +280,10 @@ return {
     'pmizio/typescript-tools.nvim',
     dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
     opts = {
+      on_attach = function(client)
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+      end,
       settings = {
         tsserver_plugins = {
           -- for TypeScript v4.9+
